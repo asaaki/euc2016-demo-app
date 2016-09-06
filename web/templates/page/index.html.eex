@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <h2><%= gettext "Welcome to %{name}", name: "EUC 2016!" %></h2>
+  <p class="lead">Docker workshop</p>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Cmark test</div>
+  <div class="panel-body">
+    <section>
+      <p>Input:</p>
+      <p><code><%= md_string %></code></p>
+    </section>
+    <p>Output:</p>
+    <%= raw md_parsed %>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">System Info</div>
+  <div class="panel-body">
+    <p class="lead">ENV</p>
+    <dl>
+      <%= for {e_key, e_val} <- system_env do %>
+        <dt><%= e_key %></dt>
+        <dd><%= e_val %></dd>
+      <% end %>
+    </dl>
+  </div>
+</div>

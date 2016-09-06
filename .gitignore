@@ -1,0 +1,7 @@
+/_build
+/*.ez
+/config/prod.secret.exs
+/db
+/deps
+/node_modules
+erl_crash.dump
